@@ -16,6 +16,6 @@ async def send_posts():
 
 if __name__ == '__main__':
     scheduler = AsyncIOScheduler(timezone='UTC')
-    scheduler.add_job(send_posts, 'interval', minutes=0.05)
+    scheduler.add_job(send_posts, 'interval', minutes=5)
     scheduler.start()
     executor.start_polling(dp)
